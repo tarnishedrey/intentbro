@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         val btnMoveActivity: Button = findViewById(R.id.btn_move_activity)
+        val movedata: Button = findViewById(R.id.movedata)
         btnMoveActivity.setOnClickListener(this)
+        movedata.setOnClickListener(this)
     }
 
 
