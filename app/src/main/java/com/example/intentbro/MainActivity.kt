@@ -1,6 +1,7 @@
 package com.example.intentbro
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -15,8 +16,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnMoveActivity: Button = findViewById(R.id.btn_move_activity)
         val movedata: Button = findViewById(R.id.movedata)
+        val btnDialPhone: Button = findViewById(R.id.btn_dial_number)
         btnMoveActivity.setOnClickListener(this)
         movedata.setOnClickListener(this)
+        btnDialPhone.setOnClickListener(this)
     }
 
 
@@ -33,12 +36,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 moveWithDataIntent.putExtra(MoveActData.EXTRA_AGE, 5)
                 startActivity(moveWithDataIntent)
             }
-
-
+                R.id.btn_dial_number -> {
+                    val phoneNumber = ""
+                    val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                    startActivity(dialPhoneIntent)
+                }
         }
 
     }
+
 }
+
 
 
 
