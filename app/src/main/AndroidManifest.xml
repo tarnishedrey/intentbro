@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Intentbro"
         tools:targetApi="31">
         <activity
+            android:name=".MoveMyData"
+            android:exported="false" />
+        <activity
             android:name=".MoveActData"
             android:exported="false" />
         <activity

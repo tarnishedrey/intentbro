@@ -17,9 +17,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val btnMoveActivity: Button = findViewById(R.id.btn_move_activity)
         val movedata: Button = findViewById(R.id.movedata)
         val btnDialPhone: Button = findViewById(R.id.btn_dial_number)
+        val btnMyData: Button = findViewById(R.id.btn_mydata)
         btnMoveActivity.setOnClickListener(this)
         movedata.setOnClickListener(this)
         btnDialPhone.setOnClickListener(this)
+        btnMyData.setOnClickListener(this)
     }
 
 
@@ -32,15 +34,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             R.id.movedata -> {
                 val moveWithDataIntent = Intent(this@MainActivity, MoveActData::class.java)
-                moveWithDataIntent.putExtra(MoveActData.EXTRA_NAME, "DicodingAcademy Boy")
+                moveWithDataIntent.putExtra(MoveActData.EXTRA_NAME, "Keren Bat dah gw")
                 moveWithDataIntent.putExtra(MoveActData.EXTRA_AGE, 5)
                 startActivity(moveWithDataIntent)
             }
-                R.id.btn_dial_number -> {
-                    val phoneNumber = ""
-                    val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
-                    startActivity(dialPhoneIntent)
-                }
+            R.id.btn_dial_number -> {
+                val phoneNumber = ""
+                val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                startActivity(dialPhoneIntent)
+            }
+
+            R.id.btn_mydata -> {
+                val Mydata = Intent(this@MainActivity, MoveMyData::class.java)
+                Mydata.putExtra(MoveActData.EXTRA_NAME, "Reyhan Wafii")
+                Mydata.putExtra(MoveActData.EXTRA_AGE, 13)
+                startActivity(Mydata)
+            }
         }
 
     }
