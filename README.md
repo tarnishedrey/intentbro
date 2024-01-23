@@ -1,6 +1,5 @@
 # Hasil Intent
 
-Intent
 
 
 ![alt text](/intenthome.png)
